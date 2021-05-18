@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase auth</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+  <script src="https://use.fontawesome.com/182a859411.js"></script>
+</head>
+
+<body>
+
+
+
+  <div class="caja">
+    <h3 class="text-primary mb-4">Sign up</h3>
+
+
+    <form id="signup-form">
+      <div class="form-group inputWithIcon inputIconBg">
+
+        <label for=""  class="text-white">Email</label>
+        <input class="form-control" id="signup-email" placeholder="example@gmail.com">
+        
+      </div>
+
+
+
+      <div class="form-group inputWithIcon inputIconBg">
+        <label for="" class="text-white">Password</label>
+        <input type="password" class="form-control" id="signup-password" placeholder="Password">
+        
+      </div>
+
+      <div class="cajita">
+        <div class="form-group">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="dropdownCheck">
+            <label class="form-check-label text-white" for="dropdownCheck">
+              Remember me
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" >Sign up</button>
+        
+      </div>
+
+      <div class="dropdown-divider"></div>
+    
+    <a class="dropdown-item text-primary" href="index.html">Back to Login</a>
+    </div>
+    
+    
+    </div>
+    </form>
+
+
+
+
+
+<!-- FIREBASE SCRIPTS (borrar el key al subir) -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  const auth = firebase.auth();
+  const fs = firebase.firestore();
+</script>
+
+<!-- CUSTOM CODE -->
+<script src="signup.js"></script>
+
+</body>
+
+</html>
