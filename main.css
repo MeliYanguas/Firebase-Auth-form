@@ -77,7 +77,7 @@ body{
 }
 
 /*Responsive*/
-@media (max-width: 1800px){
+@media (max-width: 1300px){
     body{
         background-size: 200%;
        
